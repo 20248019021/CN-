@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CN编程学院后台</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--导航开始-->
+<nav class="navbar navbar-default" id="admin-nav">
+    <div class="container">
+        <!--小屏幕logo和栏目按钮-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index_second.html" class="navbar-brand">CN MASTER</a>
+        </div>
+
+        <!--中等及以上屏幕导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="index_second.html">
+                        <span class="glyphicon glyphicon-home"></span>
+                        后台首页
+                    </a>
+                </li>
+                <li>
+                    <a href="user-list.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="content.html">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        内容管理
+                    </a>
+                </li>
+                <li>
+                    <a href="tag.html">
+                        <span class="glyphicon glyphicon-tag"></span>
+                        标签管理
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MASTER
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="#"><span class="glyphicon glyphicon-globe"></span>前台首页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>个人主页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span>个人设置</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-th"></span>账户中心</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!--导航结束-->
+
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <a href="content.html" class="list-group-item active">内容管理</a>
+                    <a href="add-article.html" class="list-group-item">添加内容</a>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1 class="mg0 pd0 fz16">内容管理</h1>
+                </div>
+                <div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="content.html">文章列表</a>
+                        </li>
+                        <li>
+                            <a href="add-article.html">添加内容</a>
+                        </li>
+                    </ul>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>文章标题</th>
+                            <th>作者</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">高考来临之际，某互联网公司做了1件事！引发全民轰动</th>
+                            <td>张三</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">互联网产品是顺从用户？还是教育用户？哪个更好？</th>
+                            <td>李四</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">国内5G新巨头：日均进账超2亿，它一路拿下46份5</th>
+                            <td>王五</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">蒋军：4大重要营销概念的正本清源！</th>
+                            <td>张三</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">腾讯微博终于“扛不住”！官宣9月28日彻底关停</th>
+                            <td>李四</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">什么是互联网思维？怎么通过互联网思维赚钱？</th>
+                            <td>王五</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">掌握这4种商业套路，让你变得更优秀，成大赢家！</th>
+                            <td>张三</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">如何使用互联网思维？得到财富自由</th>
+                            <td>李四</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10年了，马化腾终于放弃了微博！</th>
+                            <td>王五</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">互联网公司程序员，在长辈实体店充2000送2000</th>
+                            <td>张三</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <th scope="row">掌握这4种商业套路，让你变得更优秀，成大赢家！</th>
+                        <td>张三</td>
+                        <td>2020.07.07</td>
+                        <td>
+                            <div role="presentation" class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    操作<span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">编辑</a></li>
+                                    <li><a href="#">删除</a></li>
+                                    <li><a href="#">锁定</a></li>
+                                    <li><a href="#">修改密码</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">如何使用互联网思维？得到财富自由</th>
+                            <td>李四</td>
+                            <td>2020.07.07</td>
+                            <td>
+                                <div role="presentation" class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                        操作<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">锁定</a></li>
+                                        <li><a href="#">修改密码</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <nav class="pull-right">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--footer 开始-->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>京ICP备11008151号-6 京公网安备11010802014853</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer 结束-->
+
+
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

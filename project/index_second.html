@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CN编程学院后台</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--导航开始-->
+<nav class="navbar navbar-default" id="admin-nav">
+    <div class="container">
+        <!--小屏幕logo和栏目按钮-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index_second.html" class="navbar-brand">CN MASTER</a>
+        </div>
+
+        <!--中等及以上屏幕导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active">
+                    <a href="index_second.html">
+                        <span class="glyphicon glyphicon-home"></span>
+                        后台首页
+                    </a>
+                </li>
+                <li>
+                    <a href="user-list.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="content.html">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        内容管理
+                    </a>
+                </li>
+                <li>
+                    <a href="tag.html">
+                        <span class="glyphicon glyphicon-tag"></span>
+                        标签管理
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MASTER
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="#"><span class="glyphicon glyphicon-globe"></span>前台首页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>个人主页</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span>个人设置</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-th"></span>账户中心</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!--导航结束-->
+
+<!--警告层 开始-->
+<section id="warning">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4>网站程序有漏洞，请及时修复！</h4>
+                    <p>Bootstrap 的警告框插件对外暴露了一些可以被监听的事件。当 close 方法被调用后立即触发此事件。closed.bs.alert	当警告框被关闭后（也即 CSS 过渡效果完毕之后）立即触发此事件。</p>
+                    <p>
+                        <button type="button" class="btn btn-danger">立即修复</button>
+                        <button type="button" class="btn btn-default" data-dismiss="alert">稍后处理</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--警告层 结束-->
+
+<!--主体内容 开始-->
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <!--网站统计数据-->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">网站统计数据</div>
+                    <div class="panel-body">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>统计项目</th>
+                                <th>昨日</th>
+                                <th>今日</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>注册会员</th>
+                                <td>200</td>
+                                <td>400</td>
+                            </tr>
+                            <tr>
+                                <th>登录会员</th>
+                                <td>600</td>
+                                <td>700</td>
+                            </tr>
+                            <tr>
+                                <th>今日发贴</th>
+                                <td>1200</td>
+                                <td>800</td>
+                            </tr>
+                            <tr>
+                                <th>转帖次数</th>
+                                <td>2200</td>
+                                <td>3400</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--网站热贴-->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">网站热贴</div>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            TikTok美国用户：因为教中国孩子英语，我可能会坐牢
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            没疫苗东京奥运将取消？武藤敏郎：不是先决条件
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            黎巴嫩爆炸一个月后 航拍画面:港口变废墟 深坑如月球表面
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            无人机在以色列特拉维夫最大广场空投大麻，路人上街抢夺
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            克罗地亚一婚礼致36人感染新冠 政府将限制参与活动人数
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <span class="glyphicon glyphicon-list"></span>
+                            北京银保监局:信用卡还款优惠政策不代表疫情期间不需还款
+                            <small class="pull-right">2021/08/08</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--统计图表 -->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">今日访客统计</div>
+                    <div class="panel-body">
+                        <canvas id="canvas" class="col-md-12"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!--服务器状态-->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">服务器状态</div>
+                    <div class="panel-body state">
+                        <p>内存使用率40%</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <span class="sr-only">40% Complete (success)</span>
+                            </div>
+                        </div>
+                        <p>数据库使用率20%</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                <span class="sr-only">20% Complete</span>
+                            </div>
+                        </div>
+                        <p>硬盘使用率17%</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <span class="sr-only">60% Complete (warning)</span>
+                            </div>
+                        </div>
+                        <p>CPU使用率36%</p>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">团队留言板</div>
+                    <div class="panel-body">
+                        <!--留言板-->
+                        <div class="col-md-7">
+                            <div class="media well">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object wh64" src="images/bbs-1.png" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">NuxtJs模块</h4>
+                                    是一个基于 Vue.js 的通用应用框架。通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 UI渲染。
+                                </div>
+                            </div>
+                            <div class="media well">
+                                <div class="media-body text-right">
+                                    <h4 class="media-heading">NuxtJs性能</h4>
+                                    Nuxt.js 默认会优化你的应用程序。我们尽可能地利用 Vue.js 和 Node.js 的最佳实践来构建高性能的应用程序。
+                                </div>
+                                <div class="media-right">
+                                    <a href="#">
+                                        <img class="media-object wh64" src="images/bbs-2.png" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="media well">
+                                <div class="media-body text-right">
+                                    <h4 class="media-heading">NuxtJs性能</h4>
+                                    Nuxt 帮你把所有不需要的比特都从你的应用程序中剔除，并且还包含了一组分析器，以便更好地优化你的应用程序。
+                                </div>
+                                <div class="media-right">
+                                    <a href="#">
+                                        <img class="media-objectwh64 wh64" src="images/bbs-2.png" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="media well">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object wh64" src="images/bbs-1.png" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">NuxtJs模块</h4>
+                                    Nuxt.js 具备有吸引力的解决方案、描述清晰的错误消息、强大的默认值和详细的文档。如果有问题或遇到困难，我们的社区会帮助你解决。
+                                </div>
+                            </div>
+                        </div>
+                        <!--请输入内容-->
+                        <div class="col-md-5">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label for="text1">输入留言内容</label>
+                                    <textarea class="form-control" id="text1" cols="10" rows="5" placeholder="请输入留言内容"></textarea>
+                                    <button type="submit" class="btn btn-default mt15">发送</button>
+                                </div>
+                            </form>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">团队联系手册</div>
+                                <div class="panel-body">
+                                    <ul class="list-group mt15">
+                                        <li class="list-group-item">站长(张三)：<span class="glyphicon glyphicon-phone"></span>1846009****</li>
+                                        <li class="list-group-item">技术(王二)：<span class="glyphicon glyphicon-phone"></span>1391488****</li>
+                                        <li class="list-group-item">推广(李四)：<span class="glyphicon glyphicon-phone"></span>1681599****</li>
+                                        <li class="list-group-item">客服(刘能)：<span class="glyphicon glyphicon-phone"></span>1594444****<span class="glyphicon glyphicon-phone-alt ml20"></span>010-****7722</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--主体内容 结束-->
+
+
+<!--footer 开始-->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>*ICP备*号-6 *公网安备*</p>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="index.html">
+                进入CN前端
+            </a>
+        </div>
+    </div>
+</section>
+<!--footer 结束-->
+
+
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
